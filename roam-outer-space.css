@@ -23,6 +23,17 @@
   --font-size: 16px;
 }
 
+em {
+  text-decoration: none !important;
+  font-style: normal !important;
+  background-color: #ffee003d;
+}
+
+.controls {
+  padding-top: 5px;
+  padding-left: 3px;
+}
+
 .controls .rm-bullet__inner {
     width: 6px !important;
     height: 6px !important;
@@ -80,14 +91,9 @@ body,
 
 .roam-center,
 .roam-body-main {
-  border-left: 1px solid var(--subtle-border-color) !important;
-  border-top: 1px solid var(--subtle-border-color) !important;
-  border-right: 1px solid var(--subtle-border-color) !important;
-  border-radius: 12px 12px 0 0;
+  border: none;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.03) !important;
   background: var(--main-area-background-color) !important;
-  margin-right: 8px;
-  margin-left: 8px;
 }
 @media (max-width: 640px) {
   .roam-center,
@@ -114,8 +120,9 @@ body,
 }
 
 .roam-topbar {
-  background: var(--page-background-color) !important;
+  background: var(--main-area-background-color) !important;
   border-bottom: none !important;
+  box-shadow: none !important;
 }
 .roam-topbar input#find-or-create-input {
   box-shadow: none !important;
@@ -123,11 +130,11 @@ body,
 }
 
 .roam-body,
-.roam-topbar,
 #right-sidebar,
 .roam-sidebar-container {
   background: var(--page-background-color) !important;
   box-shadow: none !important;
+  transition: none !important;
 }
 
 .rm-quick-capture-sync-modal {
@@ -135,16 +142,20 @@ body,
   border-radius: 8px !important;
 }
 
+.roam-main {
+  transition: none !important;
+}
+
+.roam-sidebar-container + div {
+  transition: none !important;
+}
+
 #right-sidebar {
   border: none !important;
-  transition: none !important;
   overflow: hidden !important;
 }
 #right-sidebar h1 {
   font-size: 18px !important;
-}
-#right-sidebar #roam-right-sidebar-content {
-  margin-left: -6px !important;
 }
 #right-sidebar #roam-right-sidebar-content > div[style] {
   border-bottom: 1px solid var(--subtle-border-color) !important;
@@ -168,6 +179,11 @@ body,
   line-height: 1.5 !important;
   font-size: 26px !important;
   font-weight: 600 !important;
+}
+
+.rm-title-display,
+.rm-title-editing-display {
+  margin-top: 0 !important;
 }
 
 .rm-level1 {
@@ -323,7 +339,6 @@ span.checkmark {
 .rm-reference-item {
   background: var(--reference-item-background) !important;
   border: 1px solid var(--subtle-border-color) !important;
-  border-radius: 6px !important;
   padding: 8px 10px 8px 2px !important;
 }
 .rm-reference-item .rm-block-text {
@@ -484,16 +499,4 @@ span.checkmark {
 #rm-mobile-bar[style*="bottom: 0px"] {
   padding-bottom: env(safe-area-inset-bottom);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 15px, rgba(0, 0, 0, 0.1) 0px 0px 50px !important;
-}
-
-/* Credits */
-.roam-topbar > div > div:last-child ul.bp3-menu:after {
-  content: "Better Roam Research theme by @linuz90";
-  width: 160px;
-  display: inline-block;
-  font-size: 13px;
-  line-height: 1.4;
-  padding: 7px;
-  opacity: 0.6;
-  color: var(--font-color-lighter);
 }
