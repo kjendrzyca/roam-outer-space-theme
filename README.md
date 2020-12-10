@@ -20,12 +20,12 @@ This theme is heavily based on the excellent (and highly polished) [better-roam-
 
 ### [2020-12-10]
 
-- `<em>` element is now used to do highglights. This is done to be able to have bold and highlighted passages and it enables Progressive Summarization. It's impossible to use regular Roam highlights on a bolded text (so far 🤞). See instructions below to disable this rule.
+- `<em>` element is now used to do highglights. This is done to be able to have bold and highlighted passages (this enables [Progressive Summarization](https://fortelabs.co/blog/progressive-summarization-a-practical-technique-for-designing-discoverable-notes)). It's impossible to use regular Roam highlights on a bolded text (so far 🤞). See instructions below to disable this rule.
 - Unified the look of the top bar, now it's the same color as the main section.
 - Fixed some minor spacing issues.
 - Disabled usless animations of the sidebar and main section.
 
-To disable <em> highlighting, remove the following rule:
+To disable `<em>` highlighting, remove the following rule:
 
 ```
 em {
